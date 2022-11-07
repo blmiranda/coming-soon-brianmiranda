@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  font-size: 62.5%; /* 1rem = 10px */
+
+  --font: Poppins, sans-serif;
+}
+
+body,
+html {
+  color: #d6d6d6;
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: var(--font);
+  position: relative;
+  overflow: hidden;
+}
+
+/*
+================================
+BACKGROUND
+===============================
+*/
+
+.background {
+  filter: blur(100px);
+  width: 601px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(30deg);
+  animation: rotation 5s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg) translate(-50%, -50%);
+	}
+	100% {
+		transform: rotate(-360deg) translate(-50%, -50%);
+	}
+}
+
+.top {
+  width: 100%;
+  display: block;
+}
+#red {
+  background-color: #ff008c;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: inline-block;
+}
+#green {
+  background-color: #00c456;
+  width: 300px;
+  height: 300px;
+  margin-left: -4px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.bottom {
+  width: 100%;
+  display: block;
+  margin-top: -4px;
+}
+#blue {
+  background-color: #01b2fe;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: inline-block;
+}
+#yellow {
+  background-color: #ffcd00;
+  width: 300px;
+  height: 300px;
+  margin-left: -4px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/*
+================================
+CARD
+===============================
+*/
+
+.card {
+  width: 567.2px;
+  height: 355.8px;
+  border: 3px solid white;
+  border-radius: 15px;
+  box-shadow: 11px 11px 15px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-size: 40px;
+}
+p {
+  font-size: 24.9px;
+  font-weight: 100;
+}
+
+/*
+================================
+MEDIA QUERIES
+===============================
+*/
+
+@media only screen and (max-width: 600px) {
+  .background {
+    transform: scale(80%) translate(-50%, -50%) rotate(30deg);
+  }
+
+  .card {
+    width: 85vw;
+    height: 40vh;
+  }
+}
+
